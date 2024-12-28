@@ -108,7 +108,7 @@ export default class GaChaModel {
             logger.warn('This fulfilled promise did not return a value.')
           }
         } else {
-           logger.error('Promise rejected:', result.reason)
+          logger.error('Promise rejected:', result.reason)
         }
       })
 

@@ -2,7 +2,7 @@ import _ from 'lodash'
 import GaChaModel from '@src/models/gacha'
 import { Image, Text, } from 'alemonjs'
 import { picRender } from '@src/models/image'
-export const updateGachaFunc = async (Send, kmcModel: GaChaModel) => {
+export const updateGachaFunc = async (Send: Function, kmcModel: GaChaModel) => {
     Send(Text(`正在获取[UID: ${kmcModel.player_id}]的抽卡数据，请稍后...`))
     try {
         const { updateNum } = await kmcModel.updateGacha()

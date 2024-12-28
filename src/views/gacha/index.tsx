@@ -78,7 +78,6 @@ export default function GaChaApp({
   type
 }: GaChaAppProps) {
   const viewType = type === 'UP' ? '精准' : '常驻'
-
   return (
     <>
       <Page>

@@ -1,5 +1,5 @@
 import util from '@src/models/util'
-import OnlineImage from '@src/apps/image'
+import OnlineImage from '@src/apps/online/image'
 import { Image, Text, useSend } from 'alemonjs'
 export default OnResponse(async (event, next) => {
     if (!util.getRuleReg(/版本活动/).test(event.MessageText)) {

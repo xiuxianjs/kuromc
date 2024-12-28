@@ -1,14 +1,38 @@
-import fs, { mkdirSync } from 'fs'
+import fs, { existsSync, mkdirSync } from 'fs'
 import yaml from 'yaml'
 import { dirname, join } from 'path'
-import css from '../public/kuromc.css'
-import dir from '../index.css'
+import { fileURLToPath } from 'url';
+
+// 获取当前文件的目录
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+/**
+ * @param currentDir 
+ * @returns 
+ */
+const getProcessRootDir = (currentDir: string) => {
+  const packagePath = join(currentDir, 'package.json');
+  // 检查 package.json 是否存在
+  if (existsSync(packagePath)) {
+    return currentDir; // 返回当前目录
+  }
+  // 获取父目录
+  const parentDir = dirname(currentDir);
+  // 如果已到达根目录
+  if (parentDir === currentDir) {
+    return parentDir;
+  }
+  // 递归检查父目录
+  return getProcessRootDir(parentDir);
+};
+
+const __cwd = getProcessRootDir(__dirname)
 
 export default new (class Util {
   pluginName = 'kuromc-plugin'
-  pluginHtmlCssRoot = dirname(css)
   rootPath = process.cwd().replace(/\\/g, '/')
-  pluginRootPath = `${this.rootPath}/plugins/${this.pluginName}`
+  pluginRootPath = join(__cwd, 'public')
 
   getRuleReg(reg: RegExp, prefix: string = 'kmc') {
     // 获取原正则表达式的字符串表示形式和标志
@@ -77,7 +101,7 @@ export default new (class Util {
   }
 
   get version() {
-    const pkg = this.readJSON(join(dirname(dir), "../", 'package.json'))
+    const pkg = this.readJSON(join(__cwd, 'package.json'))
     return pkg.version
   }
 

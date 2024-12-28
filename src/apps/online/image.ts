@@ -1,7 +1,7 @@
 import { Puppeteer } from 'jsxp'
 
 export default class OnlineImage {
-  Pup: typeof Puppeteer.prototype = null
+  Pup: typeof Puppeteer.prototype | null = null
   url: string
 
   constructor(url) {
@@ -11,6 +11,10 @@ export default class OnlineImage {
   }
 
   async createHomeEleImg(selector) {
+    //
+    if (!this.Pup) return false
+
+    //
     if (!(await this.Pup.isStart())) return false
 
     try {
