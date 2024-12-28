@@ -13,7 +13,7 @@ export default function App() {
         <div className="text-center">
           <p>
             create by <span className="kuromc-text-title">kuromc-plugin</span> v
-            <span className="italic">{util.version}</span>
+            <span className="italic">{util?.version ?? ''}</span>
           </p>
         </div>
       </footer>

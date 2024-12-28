@@ -1,10 +1,12 @@
-import fs from 'fs'
+import fs, { mkdirSync } from 'fs'
 import yaml from 'yaml'
-import { join } from 'path'
+import { dirname, join } from 'path'
+import css from '../public/kuromc.css'
+import dir from '../index.css'
 
 export default new (class Util {
   pluginName = 'kuromc-plugin'
-  pluginHtmlCssRoot = `../../plugins/${this.pluginName}/public`
+  pluginHtmlCssRoot = dirname(css)
   rootPath = process.cwd().replace(/\\/g, '/')
   pluginRootPath = `${this.rootPath}/plugins/${this.pluginName}`
 
@@ -67,6 +69,7 @@ export default new (class Util {
   writeYAML(filePath: string, yamlData: any) {
     try {
       const data = yaml.stringify(yamlData);
+      mkdirSync(dirname(filePath), { recursive: true })
       fs.writeFileSync(filePath, data);
     } catch (error) {
       logger.error('写入YAML文件失败:', error);
@@ -74,7 +77,7 @@ export default new (class Util {
   }
 
   get version() {
-    const pkg = this.readJSON(join(this.pluginRootPath, 'package.json'))
+    const pkg = this.readJSON(join(dirname(dir), "../", 'package.json'))
     return pkg.version
   }
 

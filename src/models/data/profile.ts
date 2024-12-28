@@ -1,6 +1,3 @@
-import { createRequire } from 'module'
-
-const require = createRequire(import.meta.url)
 
 export enum E_Profile_Key {
   '气动' = '气动',
@@ -15,37 +12,45 @@ export type T_Profile = {
   key: string,
   name: string,
   icon: string
-}
+};
+
+// Importing icons using import statements
+import windIcon from '../../public/assets/image/IconElement/T_IconElementWind3.png';
+import thunderIcon from '../../public/assets/image/IconElement/T_IconElementThunder3.png';
+import fireIcon from '../../public/assets/image/IconElement/T_IconElementFire3.png';
+import lightIcon from '../../public/assets/image/IconElement/T_IconElementLight3.png';
+import iceIcon from '../../public/assets/image/IconElement/T_IconElementIce3.png';
+import darkIcon from '../../public/assets/image/IconElement/T_IconElementDark3.png';
 
 export default {
   '气动': {
     key: 'Wind',
     name: '气动',
-    icon: require('../../public/assets/image/IconElement/T_IconElementWind3.png'),
+    icon: windIcon,
   },
   '导电': {
     key: 'Thunder',
     name: '导电',
-    icon: require('../../public/assets/image/IconElement/T_IconElementThunder3.png'),
+    icon: thunderIcon,
   },
   '热熔': {
     key: 'Fire',
     name: '热熔',
-    icon: require('../../public/assets/image/IconElement/T_IconElementFire3.png'),
+    icon: fireIcon,
   },
   '衍射': {
     key: 'Light',
     name: '衍射',
-    icon: require('../../public/assets/image/IconElement/T_IconElementLight3.png'),
+    icon: lightIcon,
   },
   '冷凝': {
     key: 'Ice',
     name: '冷凝',
-    icon: require('../../public/assets/image/IconElement/T_IconElementIce3.png'),
+    icon: iceIcon,
   },
   '湮灭': {
     key: 'Dark',
     name: '湮灭',
-    icon: require('../../public/assets/image/IconElement/T_IconElementDark3.png'),
+    icon: darkIcon,
   }
-} as Record<E_Profile_Key, T_Profile>
+} as Record<E_Profile_Key, T_Profile>;
