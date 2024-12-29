@@ -1,6 +1,6 @@
 import React from 'react'
 import util from '../../models/util'
-export default function App() {
+export default function Footer() {
   return (
     <footer className="text-gray-300 py-6 absolute left-0 bottom-0 w-full ">
       <div className="text-center">

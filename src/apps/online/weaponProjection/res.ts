@@ -5,13 +5,13 @@ import { Image, Text, useSend } from 'alemonjs'
 // tudo: 未完成
 export default OnResponse(
   async (event, next) => {
-    if (!util.getRuleReg(/(共鸣者|角色图鉴)/).test(event.MessageText)) {
+    if (!util.getRuleReg(/武器投影图鉴/).test(event.MessageText)) {
       next()
       return
     }
     // 创建一个send
     const Send = useSend(event)
-    const res = await DB.getAympathizer()
+    const res = await DB.getWeaponProjection()
     if (!res) {
       Send(Text('数据获取失败'))
       return
@@ -24,7 +24,7 @@ export default OnResponse(
     })
     // pic
     const img = await picImage('CharacterCatalog', {
-      titile: '角色图鉴',
+      titile: '武器投影图鉴',
       data
     })
     // send

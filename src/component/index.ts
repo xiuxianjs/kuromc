@@ -1,5 +1,5 @@
 import { renders } from 'jsxp'
-import Sympathizer from './Sympathizer'
+import CharacterCatalog from './CharacterCatalog'
 export const picImage = renders({
-  Sympathizer
+  CharacterCatalog
 })

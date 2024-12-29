@@ -1,4 +1,4 @@
-export interface apiWikiCoreCatalogueItemGetPageData {
+export interface CharacterCatalog {
   code: number
   msg: string
   data: {

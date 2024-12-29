@@ -1,4 +1,4 @@
-import { apiWikiCoreCatalogueItemGetPageData } from './typing'
+import { CharacterCatalog } from './typing'
 
 export const baseURL = 'https://wiki.kurobbs.com'
 export const baseAPIURL = 'https://api.kurobbs.com'
@@ -52,18 +52,22 @@ export const apiWikiCoreScoreRecordGetTop10List = async (params: {
  * 全部共鸣者
  * @returns
  */
-export const apiWikiCoreCatalogueItemGetPage =
-  async (): Promise<apiWikiCoreCatalogueItemGetPageData> => {
-    const url = `/wiki/core/catalogue/item/getPage`
-    return await fetch(`${baseAPIURL}${url}`, {
-      method: 'POST',
-      headers: {
-        ...BaseHeaders
-      },
-      body: new URLSearchParams({
-        catalogueId: '1105',
-        page: '1',
-        limit: '1000'
-      })
-    }).then(response => response.json())
-  }
+export const apiWikiCoreCatalogueItemGetPage = async (params?: {
+  catalogueId?: string
+  page?: string
+  limit?: string
+}): Promise<CharacterCatalog> => {
+  const { catalogueId = '1105' } = params || {}
+  const url = `/wiki/core/catalogue/item/getPage`
+  return await fetch(`${baseAPIURL}${url}`, {
+    method: 'POST',
+    headers: {
+      ...BaseHeaders
+    },
+    body: new URLSearchParams({
+      catalogueId,
+      page: '1',
+      limit: '1000'
+    })
+  }).then(response => response.json())
+}

@@ -29,8 +29,16 @@ export default function App() {
             content: '抽卡帮助信息'
           },
           {
-            title: 'kmc共鸣者',
+            title: 'kmc(共鸣者|角色图鉴)',
             content: '查看角色列表'
+          },
+          {
+            title: 'kmc武器图鉴',
+            content: '查看武器列表'
+          },
+          {
+            title: 'kmc武器投影图家',
+            content: '查看武器投影列表'
           }
         ].map((item, index) => (
           <li key={index} className="p-4">
