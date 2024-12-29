@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import { LinkStyleSheet, renders } from "jsxp";
-import css from "../public/kuromc.css";
+import css from "@src/assets/kuromc.css";
 const HtmlComponent = (props: PropsWithChildren) => {
   return (
     <html>
@@ -11,9 +11,9 @@ const HtmlComponent = (props: PropsWithChildren) => {
     </html>
   );
 };
-import ViewGachaApp from "../views/gacha/gachaHelp";
-import ViewGachaIndexApp, { GaChaAppProps } from "../views/gacha/index";
-import ViewHelpApp from "../views/help/index";
+import ViewGachaApp from "@src/component/GachaHelp";
+import ViewGachaIndexApp, { GaChaAppProps } from "./GaChaApp";
+import ViewHelpApp from "./HelpApp";
 const ViewGacha = () => {
   return (
     <HtmlComponent>

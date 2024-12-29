@@ -1,18 +1,22 @@
+import { baseURL } from '@src/models/mc'
 import util from '@src/models/util'
-import OnlineImage from '@src/pic/image'
+import { picURL } from '@src/pic'
 import { Image, Text, useSend } from 'alemonjs'
 export default OnResponse(async (event, next) => {
     if (!util.getRuleReg(/版本活动/).test(event.MessageText)) {
         next()
         return
     }
-    const onLineImg = new OnlineImage('https://wiki.kurobbs.com/mc/home')
-    const img = await onLineImg.createHomeEleImg('.hot-content-side')
+    // 创建一个send
     const Send = useSend(event)
-    if (typeof img !== 'boolean') {
+    // pic
+    const img = await picURL(`${baseURL}/mc/home`, {
+        selector: 'dev .home-module.hot-content-side',
+    })
+    // send
+    if (img) {
         Send(Image(img))
     } else {
-        Send(Text('[版本活动]图片加载失败...'))
+        Send(Text('图片加载失败'))
     }
-    return true
 }, 'message.create')

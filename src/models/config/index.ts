@@ -20,9 +20,8 @@ const defaultConfig: T_Config = {
 }
 
 export default new (class Config {
-  #configRootPath = `${util.pluginRootPath}/config`;
+  #configRootPath = `${util.appFilePath}/config`;
   #configBasePath = `${this.#configRootPath}/base.yaml`;
-
   constructor() {
     util.mkdir(this.#configRootPath)
     if (!util.fileExists(this.#configBasePath)) {

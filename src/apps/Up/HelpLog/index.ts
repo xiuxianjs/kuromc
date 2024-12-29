@@ -1,10 +1,10 @@
 import _ from 'lodash'
 import GaChaModel from '@src/models/gacha'
-import util from '@src/models/util'
 import { Image, Text, useSend } from 'alemonjs'
-import { picRender } from '@src/models/image'
+import { picRender } from '@src/component/image'
+import { RegExpTable } from '@src/RegExpTable'
 export default OnResponse(async (event, next) => {
-  if (!util.getRuleReg(/(抽卡|唤取|hq)(记录)?(up|UP|常驻|)?(?!帮助)/).test(event.MessageText)) {
+  if (!RegExpTable.HelpLog.value.test(event.MessageText)) {
     next()
     return
   }

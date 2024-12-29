@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "axios": "^1.6.5",
+    "dayjs": "^1.11.13",
     "jsxp": "1.0.8"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "@alemonjs/wechat": "^0.2.1",
     "@types/lodash": "^4.17.13",
     "@types/node": "^20.3.1",
+    "@types/qs": "^6.9.17",
     "@types/uuid": "^10.0.0",
     "@types/ws": "^8.5.5",
     "alemonjs": "2.0.0-rc.77",

@@ -1,9 +1,9 @@
 
-import { picRender } from '@src/models/image'
-import util from '@src/models/util'
+import { picRender } from '@src/component/image'
+import { RegExpTable } from '@src/RegExpTable'
 import { Image, useSend } from 'alemonjs'
 export default OnResponse(async (event, next) => {
-    if (!util.getRuleReg(/(抽卡|唤取|hq)帮助/).test(event.MessageText)) {
+    if (!RegExpTable.HelpUp.value.test(event.MessageText)) {
         next()
         return
     }

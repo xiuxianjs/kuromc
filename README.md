@@ -1,24 +1,26 @@
-# 阿柠檬明朝插件
+# 阿柠檬鸣潮应用
 
 开发文档 [https://alemonjs.com/](https://alemonjs.com/)
 
 ## 使用指南
 
+### 配置
 
-- 模块化
-
-```sh
-yarn add alemonjs-kuromc 
-```
-
-- alemon.config.yaml
+> alemon.config.yaml
 
 ```yaml
 apps:
   - "alemonjs-kuromc"
 ```
 
-- 手动
+### 下载模块
+
+
+```sh
+yarn add alemonjs-kuromc 
+```
+
+### 本地模块
 
 ```sh
 # clone
@@ -30,14 +32,14 @@ npm run build
 npm link
 ```
 
+> 在想要载入的机器人目录进行
+
+```sh
+npm link alemonjs-kuromc 
+```
+
 > 如果你要本地立即启动
 
 ```sh
 node index.js
-```
-
-> 如果要引入成本地模块
-
-```sh
-npm link alemonjs-kuromc 
 ```

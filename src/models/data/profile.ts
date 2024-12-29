@@ -15,12 +15,12 @@ export type T_Profile = {
 };
 
 // Importing icons using import statements
-import windIcon from '../../public/assets/image/IconElement/T_IconElementWind3.png';
-import thunderIcon from '../../public/assets/image/IconElement/T_IconElementThunder3.png';
-import fireIcon from '../../public/assets/image/IconElement/T_IconElementFire3.png';
-import lightIcon from '../../public/assets/image/IconElement/T_IconElementLight3.png';
-import iceIcon from '../../public/assets/image/IconElement/T_IconElementIce3.png';
-import darkIcon from '../../public/assets/image/IconElement/T_IconElementDark3.png';
+import windIcon from '@src/assets/image/IconElement/T_IconElementWind3.png';
+import thunderIcon from '@src/assets/image/IconElement/T_IconElementThunder3.png';
+import fireIcon from '@src/assets/image/IconElement/T_IconElementFire3.png';
+import lightIcon from '@src/assets/image/IconElement/T_IconElementLight3.png';
+import iceIcon from '@src/assets/image/IconElement/T_IconElementIce3.png';
+import darkIcon from '@src/assets/image/IconElement/T_IconElementDark3.png';
 
 export default {
   '气动': {

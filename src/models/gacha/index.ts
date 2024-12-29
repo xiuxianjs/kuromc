@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import moment from 'moment'
+import dayjs from 'dayjs'
 import McKuroApi, {
   CARD_POOL_TYPE,
   type T_GaChaResData,
@@ -35,13 +35,13 @@ export type T_GaCheViewData = {
 }
 
 export default class GaChaModel {
-  #mcApi: McKuroApi
   #jsonDataRootPath: string = `${util.rootPath}/data/kuromc/gacha`
   #jsonLinkPath: string = `${this.#jsonDataRootPath}/links.json`
   #jsonUserGachaPath: string
+  #mcApi: McKuroApi = null
   link: T_GachaLink
-  user_id: string
-  player_id: string
+  user_id: string = null
+  player_id: string = null
   constructor(user_id: string) {
     const links = util.readJSON(this.#jsonLinkPath) || []
     this.link = _.find(links, ['user_id', user_id])
@@ -195,7 +195,7 @@ export default class GaChaModel {
     for (let item of _.reverse(newData)) {
       // 如果当前资源的更新时间晚于最早更新时间，则将其添加到现有数据数组中，并增加更新数量计数
       // console.log(item.cardPoolType, item.name, item.resourceId, item.time, '=====>', latestTime)
-      if (moment(item.time).isAfter(moment(latestTime))) {
+      if (dayjs(item.time).isAfter(dayjs(latestTime))) {
         oldData.push(item)
         updateNum++
       } else {
@@ -223,8 +223,8 @@ export default class GaChaModel {
       const endTime = gachaData[gachaData.length - 1]?.time || ''
       if (startTime && endTime) {
         return {
-          countStartTime: moment(startTime).format('YYYY-MM-DD HH:mm:ss'),
-          countEndTime: moment(endTime).format('YYYY-MM-DD HH:mm:ss')
+          countStartTime: dayjs(startTime).format('YYYY-MM-DD HH:mm:ss'),
+          countEndTime: dayjs(endTime).format('YYYY-MM-DD HH:mm:ss')
         }
       }
     }

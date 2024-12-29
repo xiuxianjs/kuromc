@@ -32,8 +32,14 @@ const __cwd = getProcessRootDir(__dirname)
 export default new (class Util {
   pluginName = 'kuromc-plugin'
   rootPath = process.cwd().replace(/\\/g, '/')
-  pluginRootPath = join(__cwd, 'public')
+  appFilePath = join(__cwd, 'public')
 
+  /**
+   * 
+   * @param reg 
+   * @param prefix 
+   * @returns 
+   */
   getRuleReg(reg: RegExp, prefix: string = 'kmc') {
     // 获取原正则表达式的字符串表示形式和标志
     let source = reg.source

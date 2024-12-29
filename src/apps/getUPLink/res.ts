@@ -1,9 +1,9 @@
-import util from '@src/models/util'
 import _ from 'lodash'
 import GaChaModel from '@src/models/gacha'
 import { Text, useSend } from 'alemonjs'
+import { RegExpTable } from '@src/RegExpTable'
 export default OnResponse(async (event, next) => {
-    if (!util.getRuleReg(/获取(抽卡|唤取|hq)链接/).test(event.MessageText)) {
+    if (!RegExpTable.getUPLink.value.test(event.MessageText)) {
         next()
         return
     }

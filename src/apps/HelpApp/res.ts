@@ -1,7 +1,8 @@
-import { picRender } from '@src/models/image'
+import { picRender } from '@src/component/image'
+import { RegExpTable } from '@src/RegExpTable'
 import { Image, Text, useSend } from 'alemonjs'
 export default OnResponse(async (event, next) => {
-  if (!/^(\/|#)?help$/.test(event.MessageText)) {
+  if (!RegExpTable.HelpApp.value.test(event.MessageText)) {
     next()
     return
   }

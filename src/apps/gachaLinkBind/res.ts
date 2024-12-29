@@ -4,6 +4,7 @@ import GaChaModel from '@src/models/gacha'
 import { Text, useObserver, useSend } from 'alemonjs'
 import { join } from 'path'
 import { updateGachaFunc } from '../updateGachaFunc'
+import { RegExpTable } from '@src/RegExpTable'
 const jsonPath = join(util.rootPath, 'data', 'kuromc', 'gacha', 'links.json')
 const Res = OnResponse(async (event, next) => {
     const url = event.MessageText.match(
@@ -31,7 +32,7 @@ const Res = OnResponse(async (event, next) => {
 }, 'private.message.create')
 
 export default OnResponse(async (event, next) => {
-    if (!util.getRuleReg(/(绑定)?(抽卡|唤取|hq)链接(绑定)?/).test(event.MessageText)) {
+    if (!RegExpTable.gachaLinkBind.value.test(event.MessageText)) {
         next()
         return
     }
