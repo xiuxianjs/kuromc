@@ -27,20 +27,20 @@ export default function App() {
       <ul className="kuromc-text divide-y mt-10 p-4">
         {[
           {
-            title: 'kmc(唤取/抽卡/hq)(UP/常驻)',
-            content: '例：kmc唤取UP （ps：第二参数不传时默认为UP池数据）'
+            title: 'kmc抽卡(UP|常驻)记录',
+            content: '抽卡分析'
           },
           {
-            title: '抽卡链接绑定：kmc抽卡链接绑定/kmc绑定抽卡链接',
-            content: '例：kmc绑定抽卡链接（ps：仅限私聊）'
+            title: 'kmc抽卡记录更新',
+            content: '抽卡分析'
           },
           {
-            title: '抽卡链接获取：kmc获取抽卡链接',
-            content: '例：kmc获取抽卡链接（ps：仅限私聊）'
+            title: 'kmc绑定抽卡链接',
+            content: '抽卡分析'
           },
           {
-            title: '更新抽卡记录：kmc抽卡更新',
-            content: '例：kmc抽卡更新'
+            title: 'kmc获取抽卡链接',
+            content: '抽卡分析'
           }
         ].map((item, index) => (
           <li key={index} className="p-4">

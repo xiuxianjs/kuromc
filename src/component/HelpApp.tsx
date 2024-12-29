@@ -13,20 +13,20 @@ export default function App() {
             content: '插件帮助信息'
           },
           {
+            title: 'kmc版本活动',
+            content: '正在进行的活动'
+          },
+          {
+            title: 'kmc武器唤取活动',
+            content: '正在进行的武器活动'
+          },
+          {
+            title: 'kmc角色唤取活动',
+            content: '正在进行的武器活动'
+          },
+          {
             title: 'kmc抽卡帮助',
             content: '抽卡帮助信息'
-          },
-          {
-            title: 'kmc(唤取/抽卡/hq)(UP/常驻)',
-            content: '抽卡分析'
-          },
-          {
-            title: 'kmc版本活动',
-            content: '查看当前鸣潮游戏正在进行的活动'
-          },
-          {
-            title: 'kmc当期up',
-            content: '查看鸣潮当前正在up的角色'
           }
         ].map((item, index) => (
           <li key={index} className="p-4">

@@ -2,7 +2,8 @@ import util from './models/util'
 export const RegExpTable = {
   gachaLinkBind: {
     name: 'kmc绑定抽卡链接',
-    value: util.getRuleReg(/(绑定)?(抽卡|唤取|hq)链接(绑定)?/)
+    docs: 'content',
+    value: util.getRuleReg(/(绑定)?(抽卡|唤取|hq)链接/)
   },
   getUPLink: {
     name: 'kmc获取抽卡链接',
@@ -17,8 +18,8 @@ export const RegExpTable = {
     value: util.getRuleReg(/(抽卡|唤取|hq)帮助/)
   },
   HelpLog: {
-    name: 'kmc抽卡记录',
-    value: util.getRuleReg(/(抽卡|唤取|hq)(记录)?(up|UP|常驻|)?(?!帮助)/)
+    name: 'kmc抽卡(UP|常驻)记录',
+    value: util.getRuleReg(/(抽卡|唤取|hq)(up|UP|常驻)记录/)
   },
   UpdateUp: {
     name: 'kmc抽卡记录更新',

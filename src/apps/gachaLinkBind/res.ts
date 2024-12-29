@@ -31,13 +31,16 @@ const Res = OnResponse(async (event, next) => {
   return
 }, 'private.message.create')
 
-export default OnResponse(async (event, next) => {
-  if (!RegExpTable.gachaLinkBind.value.test(event.MessageText)) {
-    next()
-    return
-  }
-  const Send = useSend(event)
-  Send(Text('请发送完整的抽卡链接，抽卡链接获取请查看抽卡帮助~'))
-  const Observer = useObserver(event, 'private.message.create')
-  Observer(Res.current, ['UserId'])
-}, 'private.message.create')
+export default OnResponse(
+  async (event, next) => {
+    if (!RegExpTable.gachaLinkBind.value.test(event.MessageText)) {
+      next()
+      return
+    }
+    const Send = useSend(event)
+    Send(Text('请发送完整的抽卡链接，抽卡链接获取请查看抽卡帮助~'))
+    const Observer = useObserver(event, 'private.message.create')
+    Observer(Res.current, ['UserId'])
+  },
+  ['private.message.create', 'message.create']
+)

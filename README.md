@@ -13,6 +13,8 @@ apps:
   - 'alemonjs-kuromc'
 ```
 
+> 唤醒 `kmc帮助`
+
 #### 1.下载模块
 
 ```sh
