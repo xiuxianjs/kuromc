@@ -27,6 +27,10 @@ export default function App() {
           {
             title: 'kmc抽卡帮助',
             content: '抽卡帮助信息'
+          },
+          {
+            title: 'kmc共鸣者',
+            content: '查看角色列表'
           }
         ].map((item, index) => (
           <li key={index} className="p-4">

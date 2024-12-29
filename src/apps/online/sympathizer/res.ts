@@ -1,5 +1,5 @@
 import { picImage } from '@src/component'
-import { apiWikiCoreCatalogueItemGetPage } from '@src/models/mc'
+import { DB } from '@src/db'
 import util from '@src/models/util'
 import { Image, Text, useSend } from 'alemonjs'
 // tudo: 未完成
@@ -11,15 +11,11 @@ export default OnResponse(
     }
     // 创建一个send
     const Send = useSend(event)
-
-    const res = await apiWikiCoreCatalogueItemGetPage()
-
-    if (res.code !== 200) {
-      Send(Text(res.msg))
+    const res = await DB.getAympathizer()
+    if (!res) {
+      Send(Text('数据获取失败'))
       return
     }
-
-    console.log(res)
     const data = res.data.results.records.map(item => {
       return {
         title: item.name,

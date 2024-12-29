@@ -11,6 +11,13 @@
 ```yaml
 apps:
   - 'alemonjs-kuromc'
+
+gui:
+  port: 9602
+
+pm2:
+  name: 'gui'
+  script: 'node index.js --login gui'
 ```
 
 > 唤醒 `kmc帮助`
@@ -42,7 +49,19 @@ npm link alemonjs-kuromc
 > 如果你要本地立即启动
 
 ```sh
-node index.js
+node index.js --login gui
+```
+
+## 优化
+
+- 安装redis并配置,可使用redis缓存服务
+
+```yaml
+redis:
+  host: 'localhost'
+  port: '6379'
+  password: ''
+  db: '1'
 ```
 
 ## VScode开发指南
