@@ -1,11 +1,7 @@
 import React, { useMemo } from 'react'
 import Page from './layout/page'
 import _ from 'lodash'
-import {
-  T_CardPoolType,
-  T_GaChaData,
-  T_GaCheViewData
-} from '../models/gacha'
+import { T_CardPoolType, T_GaChaData, T_GaCheViewData } from '../models/gacha'
 import role from '../models/data/role'
 import weapon from '../models/data/weapon'
 

@@ -1,4 +1,3 @@
-
 import GaChaModel from '@src/models/gacha'
 import { Text, useSend } from 'alemonjs'
 import { updateGachaFunc } from '@src/apps/updateGachaFunc'
@@ -14,6 +13,6 @@ export default OnResponse(async (event, next) => {
     Send(Text('请先绑定抽卡链接，绑定方法请查看抽卡帮助！'))
     return true
   }
-  await updateGachaFunc(Send, kmcModel);
+  await updateGachaFunc(Send, kmcModel)
   return
 }, 'message.create')

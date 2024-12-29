@@ -65,14 +65,8 @@ export default class GaChaModel {
     const weaponGachaData: T_GaChaResData[] =
       this.readGachaJSON(`${weaponGachaType}`) || []
 
-    const roleCount = this.countGacha(
-      roleGachaData,
-      roleGachaType,
-    )
-    const weaponCount = this.countGacha(
-      weaponGachaData,
-      weaponGachaType,
-    )
+    const roleCount = this.countGacha(roleGachaData, roleGachaType)
+    const weaponCount = this.countGacha(weaponGachaData, weaponGachaType)
     return {
       role: {
         ...roleCount,
@@ -123,14 +117,12 @@ export default class GaChaModel {
    * @param listData 扭蛋结果数据数组。
    * @param typeId 卡池类型ID，用于区分不同的扭蛋池。
    */
-  countGacha(
-    listData: T_GaChaResData[],
-    typeId: CARD_POOL_TYPE,
-  ) {
+  countGacha(listData: T_GaChaResData[], typeId: CARD_POOL_TYPE) {
     let numOf4Star = 0
     let numOf5star = 0
     let lastNum = 0
-    const isItFourStarCount = config.baseConfig.gacha?.isItFourStarCount || false;
+    const isItFourStarCount =
+      config.baseConfig.gacha?.isItFourStarCount || false
     const dataArr = _.reduce(
       listData,
       (prev, curr: T_GaChaResData) => {

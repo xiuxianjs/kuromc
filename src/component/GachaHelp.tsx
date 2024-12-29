@@ -1,5 +1,5 @@
-import React from "react";
-import Page from "./layout/page";
+import React from 'react'
+import Page from './layout/page'
 
 const Footer = () => {
   return (
@@ -15,8 +15,8 @@ const Footer = () => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default function App() {
   return (
@@ -27,21 +27,21 @@ export default function App() {
       <ul className="kuromc-text divide-y mt-10 p-4">
         {[
           {
-            title: "kmc(唤取/抽卡/hq)(UP/常驻)",
-            content: "例：kmc唤取UP （ps：第二参数不传时默认为UP池数据）",
+            title: 'kmc(唤取/抽卡/hq)(UP/常驻)',
+            content: '例：kmc唤取UP （ps：第二参数不传时默认为UP池数据）'
           },
           {
-            title: "抽卡链接绑定：kmc抽卡链接绑定/kmc绑定抽卡链接",
-            content: "例：kmc绑定抽卡链接（ps：仅限私聊）",
+            title: '抽卡链接绑定：kmc抽卡链接绑定/kmc绑定抽卡链接',
+            content: '例：kmc绑定抽卡链接（ps：仅限私聊）'
           },
           {
-            title: "抽卡链接获取：kmc获取抽卡链接",
-            content: "例：kmc获取抽卡链接（ps：仅限私聊）",
+            title: '抽卡链接获取：kmc获取抽卡链接',
+            content: '例：kmc获取抽卡链接（ps：仅限私聊）'
           },
           {
-            title: "更新抽卡记录：kmc抽卡更新",
-            content: "例：kmc抽卡更新",
-          },
+            title: '更新抽卡记录：kmc抽卡更新',
+            content: '例：kmc抽卡更新'
+          }
         ].map((item, index) => (
           <li key={index} className="p-4">
             <div className="text-lg">{item.title}</div>
@@ -51,5 +51,5 @@ export default function App() {
       </ul>
       <Footer />
     </Page>
-  );
+  )
 }

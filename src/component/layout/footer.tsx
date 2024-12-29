@@ -1,5 +1,5 @@
-import React from "react";
-import util from "../../models/util";
+import React from 'react'
+import util from '../../models/util'
 export default function App() {
   return (
     <footer className="text-gray-300 py-6 absolute left-0 bottom-0 w-full ">
@@ -10,5 +10,5 @@ export default function App() {
         </p>
       </div>
     </footer>
-  );
+  )
 }

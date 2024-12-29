@@ -10,14 +10,13 @@
 
 ```yaml
 apps:
-  - "alemonjs-kuromc"
+  - 'alemonjs-kuromc'
 ```
 
 #### 1.下载模块
 
-
 ```sh
-yarn add alemonjs-kuromc 
+yarn add alemonjs-kuromc
 ```
 
 #### 2。本地模块
@@ -35,7 +34,7 @@ npm link
 > 在想要载入的机器人目录进行
 
 ```sh
-npm link alemonjs-kuromc 
+npm link alemonjs-kuromc
 ```
 
 > 如果你要本地立即启动

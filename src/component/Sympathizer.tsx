@@ -1,13 +1,13 @@
-import { LinkStyleSheet } from "jsxp";
-import React from "react";
-import cssURL from "@src/assets/index.css";
+import { LinkStyleSheet } from 'jsxp'
+import React from 'react'
+import cssURL from '@src/assets/index.css'
 export default function Sympathizer({
-  data,
+  data
 }: {
   data: {
-    title: string;
-    url: string;
-  }[];
+    title: string
+    url: string
+  }[]
 }) {
   return (
     <html>
@@ -16,7 +16,7 @@ export default function Sympathizer({
       </head>
       <body>
         <div className="flex flex-wrap gap-2">
-          {data.map((item) => (
+          {data.map(item => (
             <div className="flex border flex-col">
               <img src={item.url}></img>
               <div className="bg-black text-white">{item.title}</div>
@@ -25,5 +25,5 @@ export default function Sympathizer({
         </div>
       </body>
     </html>
-  );
+  )
 }

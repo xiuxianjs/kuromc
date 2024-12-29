@@ -1,5 +1,5 @@
-import _ from "lodash";
-import util from "../util";
+import _ from 'lodash'
+import util from '../util'
 
 type T_Config = {
   base: T_baseConfig
@@ -20,22 +20,22 @@ const defaultConfig: T_Config = {
 }
 
 export default new (class Config {
-  #configRootPath = `${util.appFilePath}/config`;
-  #configBasePath = `${this.#configRootPath}/base.yaml`;
+  #configRootPath = `${util.appFilePath}/config`
+  #configBasePath = `${this.#configRootPath}/base.yaml`
   constructor() {
     util.mkdir(this.#configRootPath)
     if (!util.fileExists(this.#configBasePath)) {
-      util.writeYAML(this.#configBasePath, defaultConfig.base);
+      util.writeYAML(this.#configBasePath, defaultConfig.base)
     }
     // this.#config.base = util.readYAML(this.#configBasePath);
   }
 
   get baseConfig(): T_baseConfig {
-    return util.readYAML(this.#configBasePath);
+    return util.readYAML(this.#configBasePath)
   }
 
   setBaseConfig(config: T_baseConfig) {
-    const oldConfig = util.readYAML(this.#configBasePath);
-    util.writeYAML(this.#configBasePath, _.merge(oldConfig, config));
+    const oldConfig = util.readYAML(this.#configBasePath)
+    util.writeYAML(this.#configBasePath, _.merge(oldConfig, config))
   }
-})();
+})()

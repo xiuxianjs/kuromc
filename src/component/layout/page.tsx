@@ -1,7 +1,7 @@
-import React, { PropsWithChildren } from "react";
-import Footer from "./footer";
-import { BackgroundImage } from "jsxp";
-import imgURL from "@src/assets/image/background.jpg";
+import React, { PropsWithChildren } from 'react'
+import Footer from './footer'
+import { BackgroundImage } from 'jsxp'
+import imgURL from '@src/assets/image/background.jpg'
 export default function App({ children }: PropsWithChildren) {
   return (
     <BackgroundImage
@@ -11,5 +11,5 @@ export default function App({ children }: PropsWithChildren) {
       {children}
       <Footer />
     </BackgroundImage>
-  );
+  )
 }

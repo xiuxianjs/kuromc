@@ -1,31 +1,31 @@
 import fs, { existsSync, mkdirSync } from 'fs'
 import yaml from 'yaml'
 import { dirname, join } from 'path'
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url'
 
 // 获取当前文件的目录
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 /**
- * @param currentDir 
- * @returns 
+ * @param currentDir
+ * @returns
  */
 const getProcessRootDir = (currentDir: string) => {
-  const packagePath = join(currentDir, 'package.json');
+  const packagePath = join(currentDir, 'package.json')
   // 检查 package.json 是否存在
   if (existsSync(packagePath)) {
-    return currentDir; // 返回当前目录
+    return currentDir // 返回当前目录
   }
   // 获取父目录
-  const parentDir = dirname(currentDir);
+  const parentDir = dirname(currentDir)
   // 如果已到达根目录
   if (parentDir === currentDir) {
-    return parentDir;
+    return parentDir
   }
   // 递归检查父目录
-  return getProcessRootDir(parentDir);
-};
+  return getProcessRootDir(parentDir)
+}
 
 const __cwd = getProcessRootDir(__dirname)
 
@@ -35,10 +35,10 @@ export default new (class Util {
   appFilePath = join(__cwd, 'public')
 
   /**
-   * 
-   * @param reg 
-   * @param prefix 
-   * @returns 
+   *
+   * @param reg
+   * @param prefix
+   * @returns
    */
   getRuleReg(reg: RegExp, prefix: string = 'kmc') {
     // 获取原正则表达式的字符串表示形式和标志
@@ -89,20 +89,20 @@ export default new (class Util {
 
   readYAML(filePath: string) {
     try {
-      const data = fs.readFileSync(filePath, 'utf8');
-      return yaml.parse(data);
+      const data = fs.readFileSync(filePath, 'utf8')
+      return yaml.parse(data)
     } catch (error) {
-      return null;
+      return null
     }
   }
 
   writeYAML(filePath: string, yamlData: any) {
     try {
-      const data = yaml.stringify(yamlData);
+      const data = yaml.stringify(yamlData)
       mkdirSync(dirname(filePath), { recursive: true })
-      fs.writeFileSync(filePath, data);
+      fs.writeFileSync(filePath, data)
     } catch (error) {
-      logger.error('写入YAML文件失败:', error);
+      logger.error('写入YAML文件失败:', error)
     }
   }
 
@@ -133,17 +133,17 @@ export default new (class Util {
     fs.mkdir(path, { recursive: true }, err => {
       if (err) {
         if (err.code !== 'EEXIST') {
-          logger.error('mkdir error', err);
+          logger.error('mkdir error', err)
         }
       }
-    });
+    })
   }
 
   fileExists(filePath: string) {
     try {
-      return fs.existsSync(filePath);
+      return fs.existsSync(filePath)
     } catch (error) {
-      return false;
+      return false
     }
   }
 })()
