@@ -13,14 +13,14 @@ apps:
   - "alemonjs-kuromc"
 ```
 
-### 下载模块
+#### 1.下载模块
 
 
 ```sh
 yarn add alemonjs-kuromc 
 ```
 
-### 本地模块
+#### 2。本地模块
 
 ```sh
 # clone
@@ -43,3 +43,10 @@ npm link alemonjs-kuromc
 ```sh
 node index.js
 ```
+
+## VScode开发指南
+
+![step 1](./docs/1.png)
+![step 2](./docs/2.png)
+![step 3](./docs/3.png)
+![step 4](./docs/4.png)
