@@ -6,7 +6,7 @@ export default function Page({ children }: PropsWithChildren) {
   return (
     <BackgroundImage
       url={imgURL}
-      className="kuromc-container kuromc-bg-img relative p-10 pb-[72px]"
+      className="kuromc-container kuromc-bg-img relative p-6 pb-[72px]"
     >
       {children}
       <Footer />

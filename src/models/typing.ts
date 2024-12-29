@@ -22,6 +22,8 @@ export interface CharacterCatalog {
           type: string
           // 标题
           title: string
+          // 类型id 星级id
+          // [0] [1]
           relateTagIds: Array<string>
           cornerMarkUrl: string
           showLeftTopIcon: boolean
