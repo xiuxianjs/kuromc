@@ -186,7 +186,7 @@ export default class GaChaModel {
     // 遍历新数据数组的逆序，以便从最新的资源开始检查
     for (let item of _.reverse(newData)) {
       // 如果当前资源的更新时间晚于最早更新时间，则将其添加到现有数据数组中，并增加更新数量计数
-      // console.log(item.cardPoolType, item.name, item.resourceId, item.time, '=====>', latestTime)
+      // logger.info(item.cardPoolType, item.name, item.resourceId, item.time, '=====>', latestTime)
       if (dayjs(item.time).isAfter(dayjs(latestTime))) {
         oldData.push(item)
         updateNum++

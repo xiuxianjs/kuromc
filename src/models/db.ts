@@ -43,7 +43,7 @@ class Data {
       if (!this.#ioRedis) this.#ioRedis = getIoRedis()
       this.#status = 'success'
     } catch (e) {
-      console.error(e)
+      logger.error(e)
       this.#status = 'local'
     }
     return this.#status
@@ -62,7 +62,7 @@ class Data {
       return JSON.parse(data)
     }
     const data = fetchData
-    console.log(data)
+    logger.info(data)
     if (data && data.code === 200) {
       writeFileSync(dir, JSON.stringify(data))
       return data

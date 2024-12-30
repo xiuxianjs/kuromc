@@ -1,10 +1,14 @@
 import GaChaModel from '@src/models/gacha'
 import { Text, useSend } from 'alemonjs'
 import { updateGachaFunc } from '@src/apps/updateGachaFunc'
-import { RegExpTable } from '@src/RegExpTable'
+import util from '@src/models/util'
 export default OnResponse(
   async (event, next) => {
-    if (!RegExpTable.UpdateUp.value.test(event.MessageText)) {
+    if (
+      !util
+        .getRuleReg(/((抽卡|唤取|hq)(记录)?更新)|(更新(抽卡|唤取|hq)(记录)?)/)
+        .test(event.MessageText)
+    ) {
       next()
       return
     }

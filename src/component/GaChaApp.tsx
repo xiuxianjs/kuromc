@@ -26,7 +26,7 @@ const GachaListItem: React.FC<GachaListItemProps> = ({ record, type }) => {
     return null
   }
 
-  // console.log('record', record)
+  // logger.info('record', record)
 
   const items = type === '角色' ? role : weapon
   const item = _(items).find(

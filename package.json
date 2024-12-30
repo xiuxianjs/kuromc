@@ -9,7 +9,6 @@
     "dev": "lvy dev",
     "build": "lvy build",
     "start": "pm2 startOrRestart pm2.config.cjs",
-    "bundle": "rollup --config rollup.config.js",
     "stop": "pm2 stop pm2.config.cjs",
     "delete": "pm2 delete pm2.config.cjs",
     "format": "prettier --write .",

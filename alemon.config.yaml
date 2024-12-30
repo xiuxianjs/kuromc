@@ -1,6 +1,2 @@
 gui:
-  port: 9602
-
-pm2:
-  name: 'gui'
-  script: 'node index.js --login gui'
+  port: 9601

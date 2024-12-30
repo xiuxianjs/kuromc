@@ -19,7 +19,7 @@ export default class OnlineImage {
 
     try {
       const page = await this.Pup.browser?.newPage().catch(err => {
-        console.error(err)
+        logger.error(err)
       })
 
       if (!page) return false
@@ -94,21 +94,21 @@ export default class OnlineImage {
           // clip
         })
         .catch(err => {
-          console.error('[puppeteer]', 'screenshot with clip', err)
+          logger.error('[puppeteer]', 'screenshot with clip', err)
           return false
         })
 
       await page.close().catch(err => {
-        console.error('[puppeteer]', 'page close', err)
+        logger.error('[puppeteer]', 'page close', err)
       })
 
       if (!buff) {
-        console.error('[puppeteer]', selector)
+        logger.error('[puppeteer]', selector)
         return false
       }
       return buff
     } catch (error) {
-      console.error('[puppeteer] newPage', error)
+      logger.error('[puppeteer] newPage', error)
       return false
     }
   }

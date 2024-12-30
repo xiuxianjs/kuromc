@@ -43,10 +43,10 @@ export const picURL = async (
     if (!isStart) await puppeteer.start()
     const browser: Browser = await puppeteer.browser
     page = await browser?.newPage().catch(err => {
-      console.error(err)
+      logger.error(err)
     })
     if (!page) {
-      console.error('page is null')
+      logger.error('page is null')
       return
     }
     // 设置页面桌面宽度
@@ -62,7 +62,7 @@ export const picURL = async (
     const bodys = await page.$$(selector)
     const body = selectorAction ? selectorAction(bodys) : bodys[0]
     if (!body) {
-      console.error('body is null')
+      logger.error('body is null')
 
       if (page && page.close) {
         page.close()
@@ -87,6 +87,6 @@ export const picURL = async (
     if (page && page.close) {
       page.close()
     }
-    console.error(err)
+    logger.error(err)
   }
 }

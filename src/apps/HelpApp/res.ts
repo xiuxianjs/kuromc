@@ -1,9 +1,9 @@
 import { picRender } from '@src/component/image'
-import { RegExpTable } from '@src/RegExpTable'
+import util from '@src/models/util'
 import { Image, Text, useSend } from 'alemonjs'
 export default OnResponse(
   async (event, next) => {
-    if (!RegExpTable.HelpApp.value.test(event.MessageText)) {
+    if (!util.getRuleReg(/(帮助|help)/).test(event.MessageText)) {
       next()
       return
     }
