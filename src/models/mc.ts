@@ -11,8 +11,38 @@ export const BaseHeaders = {
   Devcode: 'f0iBj95EkaOZnpyHbG9WAXaO4V9jj7dI'
 }
 
+// https://api.kurobbs.com/wiki/core/homepage/getPage
+
+export const apiServer = (
+  options: {
+    baseURL: string
+    url: string
+  } & RequestInit
+) => {
+  const { baseURL, url, ...reset } = options
+  return fetch(`${baseURL}${url}`, {
+    headers: {
+      ...BaseHeaders
+    },
+    ...reset
+  })
+}
+
 /**
- *  获取wiki配置
+ * 获取首页数据
+ * @returns
+ */
+export const apiWikiCoreHomepageGetPage = async () => {
+  const url = `/wiki/core/homepage/getPage`
+  return await apiServer({
+    baseURL: baseAPIURL,
+    url,
+    method: 'POST'
+  }).then(response => response.json())
+}
+
+/**
+ *  获取wiki配置树
  * @returns
  */
 export const apiWikiCoreCatalogueConfigGetTree = async (): Promise<{
@@ -23,11 +53,10 @@ export const apiWikiCoreCatalogueConfigGetTree = async (): Promise<{
   children: any[]
 }> => {
   const url = `/wiki/core/catalogue/config/getTree`
-  return await fetch(`${baseAPIURL}${url}`, {
-    method: 'POST',
-    headers: {
-      ...BaseHeaders
-    }
+  return await apiServer({
+    baseURL: baseAPIURL,
+    url,
+    method: 'POST'
   }).then(response => response.json())
 }
 
@@ -39,11 +68,10 @@ export const apiWikiCoreScoreRecordGetTop10List = async (params: {
   type: '2' | '3' | '4'
 }) => {
   const url = `/wiki/core/score/record/getTop10List`
-  return await fetch(`${baseAPIURL}${url}`, {
+  return await apiServer({
+    baseURL: baseAPIURL,
+    url,
     method: 'POST',
-    headers: {
-      ...BaseHeaders
-    },
     body: new URLSearchParams(params)
   }).then(response => response.json())
 }
@@ -59,11 +87,10 @@ export const apiWikiCoreCatalogueItemGetPage = async (params?: {
 }): Promise<CharacterCatalog> => {
   const { catalogueId = '1105' } = params || {}
   const url = `/wiki/core/catalogue/item/getPage`
-  return await fetch(`${baseAPIURL}${url}`, {
+  return await apiServer({
+    baseURL: baseAPIURL,
+    url,
     method: 'POST',
-    headers: {
-      ...BaseHeaders
-    },
     body: new URLSearchParams({
       catalogueId,
       page: '1',
