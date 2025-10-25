@@ -12,7 +12,6 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.associations": {
-    "*.bjs": "javascript"
-  }
+  "eslint.codeActionsOnSave.mode": "all",
+  "cSpell.words": ["alemongo", "alemonjs", "jsxp", "kurmoc", "lvyjs", "networkidle", "ningmengchongshui", "xiuxian"]
 }

@@ -41,19 +41,9 @@
 }
 
 .kuromc-level-4-bgc {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(76, 88, 79, 0.8) 80%,
-    rgb(201, 131, 237)
-  );
+  background: linear-gradient(to bottom, transparent, rgba(76, 88, 79, 0.8) 80%, rgb(201, 131, 237));
 }
 
 .kuromc-level-5-bgc {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(76, 88, 79, 0.8) 80%,
-    rgb(255, 246, 145)
-  );
+  background: linear-gradient(to bottom, transparent, rgba(76, 88, 79, 0.8) 80%, rgb(255, 246, 145));
 }

@@ -1,40 +1,40 @@
-import profile, { T_Profile } from './profile'
+import profile, { T_Profile } from './profile';
 
 // Importing avatar images using import statements
-import avatar1 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_1_UI.png'
-import avatar2 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_2_UI.png'
-import avatar3 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_3_UI.png'
-import avatar4 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_4_UI.png'
-import avatar5 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_5_UI.png'
-import avatar6 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_6_UI.png'
-import avatar7 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_7_UI.png'
-import avatar8 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_8_UI.png'
-import avatar9 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_9_UI.png'
-import avatar10 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_10_UI.png'
-import avatar11 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_11_UI.png'
-import avatar12 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_12_UI.png'
-import avatar13 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_13_UI.png'
-import avatar14 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_14_UI.png'
-import avatar15 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_15_UI.png'
-import avatar16 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_17_UI.png'
-import avatar17 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_18_UI.png'
-import avatar18 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_23_UI.png'
-import avatar19 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_24_UI.png'
-import avatar20 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_26_UI.png'
-import avatar21 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_27_UI.png'
+import avatar1 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_1_UI.png';
+import avatar2 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_2_UI.png';
+import avatar3 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_3_UI.png';
+import avatar4 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_4_UI.png';
+import avatar5 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_5_UI.png';
+import avatar6 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_6_UI.png';
+import avatar7 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_7_UI.png';
+import avatar8 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_8_UI.png';
+import avatar9 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_9_UI.png';
+import avatar10 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_10_UI.png';
+import avatar11 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_11_UI.png';
+import avatar12 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_12_UI.png';
+import avatar13 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_13_UI.png';
+import avatar14 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_14_UI.png';
+import avatar15 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_15_UI.png';
+import avatar16 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_17_UI.png';
+import avatar17 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_18_UI.png';
+import avatar18 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_23_UI.png';
+import avatar19 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_24_UI.png';
+import avatar20 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_26_UI.png';
+import avatar21 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_27_UI.png';
 
 export type T_RoleData = {
-  名字: string
-  resourceId?: number
-  性别: string
-  生日: string
-  属性: T_Profile
-  武器: string
-  所属: string
-  星级: number
-  avatar: string
-  up?: boolean
-}
+  名字: string;
+  resourceId?: number;
+  性别: string;
+  生日: string;
+  属性: T_Profile;
+  武器: string;
+  所属: string;
+  星级: number;
+  avatar: string;
+  up?: boolean;
+};
 
 export default [
   {
@@ -262,4 +262,4 @@ export default [
     up: true,
     avatar: avatar21
   }
-] as T_RoleData[]
+] as T_RoleData[];

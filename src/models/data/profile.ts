@@ -8,18 +8,18 @@ export enum E_Profile_Key {
 }
 
 export type T_Profile = {
-  key: string
-  name: string
-  icon: string
-}
+  key: string;
+  name: string;
+  icon: string;
+};
 
 // Importing icons using import statements
-import windIcon from '@src/assets/image/IconElement/T_IconElementWind3.png'
-import thunderIcon from '@src/assets/image/IconElement/T_IconElementThunder3.png'
-import fireIcon from '@src/assets/image/IconElement/T_IconElementFire3.png'
-import lightIcon from '@src/assets/image/IconElement/T_IconElementLight3.png'
-import iceIcon from '@src/assets/image/IconElement/T_IconElementIce3.png'
-import darkIcon from '@src/assets/image/IconElement/T_IconElementDark3.png'
+import windIcon from '@src/assets/image/IconElement/T_IconElementWind3.png';
+import thunderIcon from '@src/assets/image/IconElement/T_IconElementThunder3.png';
+import fireIcon from '@src/assets/image/IconElement/T_IconElementFire3.png';
+import lightIcon from '@src/assets/image/IconElement/T_IconElementLight3.png';
+import iceIcon from '@src/assets/image/IconElement/T_IconElementIce3.png';
+import darkIcon from '@src/assets/image/IconElement/T_IconElementDark3.png';
 
 export default {
   气动: {
@@ -52,4 +52,4 @@ export default {
     name: '湮灭',
     icon: darkIcon
   }
-} as Record<E_Profile_Key, T_Profile>
+} as Record<E_Profile_Key, T_Profile>;

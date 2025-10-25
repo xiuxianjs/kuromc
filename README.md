@@ -1,72 +1,51 @@
-# 阿柠檬鸣潮应用
+# kuromc
 
-开发文档 [https://alemonjs.com/](https://alemonjs.com/)
+必要环境 `nodejs` 、`redis` 、`chrome`
 
-## 使用指南
+该扩展推荐使用`alemongo`作为生产环境
 
-### 配置
+https://github.com/lemonade-lab/alemongo
 
-> alemon.config.yaml
+## 安装
 
-```yaml
-apps:
-  - 'alemonjs-kuromc'
+### alemongo
 
-gui:
-  port: 9602
+- 唤醒
 
-pm2:
-  name: 'gui'
-  script: 'node index.js --login gui'
-```
+`/kmc帮助`
 
-> 唤醒 `kmc帮助`
-
-#### 1.下载模块
+地址
 
 ```sh
-yarn add alemonjs-kuromc
+https://github.com/xiuxianjs/kurmoc.git
 ```
 
-#### 2。本地模块
+分支
 
 ```sh
-# clone
-git clone --depth=1  git@github.com:lemonade-lab/kuromc.git
-# build
-npm install
-npm run build
-# link
-npm link
+release
 ```
 
-> 在想要载入的机器人目录进行
+### 本地模板
 
 ```sh
-npm link alemonjs-kuromc
+git clone --depth=1 -b release  https://github.com/xiuxianjs/kurmoc.git ./packages/kurmoc
 ```
 
-> 如果你要本地立即启动
+### Redis
+
+将以默认配置连接本地redis,
+
+如需调整，请阅读[@alemonjs/db](https://www.npmjs.com/package/@alemonjs/db)配置连接,
+
+如需使用docker请参考[docker-compose.yml](./docker-compose.yml)
 
 ```sh
-node index.js --login gui
+# 启动
+docker-compose up -d
 ```
 
-## 优化
-
-- 安装redis并配置,可使用redis缓存服务
-
-```yaml
-redis:
-  host: 'localhost'
-  port: '6379'
-  password: ''
-  db: '1'
+```sh
+# 关闭
+docker-compose down
 ```
-
-## VScode开发指南
-
-![step 1](./docs/1.png)
-![step 2](./docs/2.png)
-![step 3](./docs/3.png)
-![step 4](./docs/4.png)

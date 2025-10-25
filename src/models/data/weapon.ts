@@ -1,78 +1,78 @@
-import weapon1 from '@src/assets/image/IconWeapon160/T_IconWeapon160_20002001_UI.png'
-import weapon2 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010011_UI.png'
-import weapon3 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010012_UI.png'
-import weapon4 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010013_UI.png'
-import weapon5 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010015_UI.png'
-import weapon6 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010023_UI.png'
-import weapon7 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010024_UI.png'
-import weapon8 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010034_UI.png'
-import weapon9 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010043_UI.png'
-import weapon10 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010044_UI.png'
-import weapon11 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010053_UI.png'
-import weapon12 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010064_UI.png'
-import weapon13 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010074_UI.png'
-import weapon14 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020011_UI.png'
-import weapon15 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020012_UI.png'
-import weapon16 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020013_UI.png'
-import weapon17 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020015_UI.png'
-import weapon18 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020023_UI.png'
-import weapon19 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020024_UI.png'
-import weapon20 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020034_UI.png'
-import weapon21 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020043_UI.png'
-import weapon22 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020044_UI.png'
-import weapon23 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020053_UI.png'
-import weapon24 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020064_UI.png'
-import weapon25 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020074_UI.png'
-import weapon26 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030011_UI.png'
-import weapon27 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030012_UI.png'
-import weapon28 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030013_UI.png'
-import weapon29 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030015_UI.png'
-import weapon30 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030023_UI.png'
-import weapon31 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030024_UI.png'
-import weapon32 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030034_UI.png'
-import weapon33 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030043_UI.png'
-import weapon34 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030044_UI.png'
-import weapon35 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030053_UI.png'
-import weapon36 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030064_UI.png'
-import weapon37 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030074_UI.png'
-import weapon38 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040011_UI.png'
-import weapon39 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040012_UI.png'
-import weapon40 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040013_UI.png'
-import weapon41 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040015_UI.png'
-import weapon42 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040023_UI.png'
-import weapon43 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040024_UI.png'
-import weapon44 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040034_UI.png'
-import weapon45 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040043_UI.png'
-import weapon46 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040044_UI.png'
-import weapon47 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040053_UI.png'
-import weapon48 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040064_UI.png'
-import weapon49 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040074_UI.png'
-import weapon50 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050011_UI.png'
-import weapon51 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050012_UI.png'
-import weapon52 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050013_UI.png'
-import weapon53 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050015_UI.png'
-import weapon54 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050023_UI.png'
-import weapon55 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050024_UI.png'
-import weapon56 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050034_UI.png'
-import weapon57 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050043_UI.png'
-import weapon58 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050044_UI.png'
-import weapon59 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050053_UI.png'
-import weapon60 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050064_UI.png'
-import weapon61 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050074_UI.png'
-import weapon62 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010016_UI.png'
-import weapon63 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050016_UI.png'
-import weapon64 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010026_UI.png'
-import weapon65 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020016_UI.png'
-import weapon66 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050026_UI.png'
-import weapon67 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040016_UI.png'
+import weapon1 from '@src/assets/image/IconWeapon160/T_IconWeapon160_20002001_UI.png';
+import weapon2 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010011_UI.png';
+import weapon3 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010012_UI.png';
+import weapon4 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010013_UI.png';
+import weapon5 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010015_UI.png';
+import weapon6 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010023_UI.png';
+import weapon7 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010024_UI.png';
+import weapon8 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010034_UI.png';
+import weapon9 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010043_UI.png';
+import weapon10 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010044_UI.png';
+import weapon11 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010053_UI.png';
+import weapon12 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010064_UI.png';
+import weapon13 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010074_UI.png';
+import weapon14 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020011_UI.png';
+import weapon15 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020012_UI.png';
+import weapon16 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020013_UI.png';
+import weapon17 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020015_UI.png';
+import weapon18 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020023_UI.png';
+import weapon19 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020024_UI.png';
+import weapon20 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020034_UI.png';
+import weapon21 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020043_UI.png';
+import weapon22 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020044_UI.png';
+import weapon23 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020053_UI.png';
+import weapon24 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020064_UI.png';
+import weapon25 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020074_UI.png';
+import weapon26 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030011_UI.png';
+import weapon27 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030012_UI.png';
+import weapon28 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030013_UI.png';
+import weapon29 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030015_UI.png';
+import weapon30 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030023_UI.png';
+import weapon31 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030024_UI.png';
+import weapon32 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030034_UI.png';
+import weapon33 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030043_UI.png';
+import weapon34 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030044_UI.png';
+import weapon35 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030053_UI.png';
+import weapon36 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030064_UI.png';
+import weapon37 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21030074_UI.png';
+import weapon38 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040011_UI.png';
+import weapon39 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040012_UI.png';
+import weapon40 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040013_UI.png';
+import weapon41 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040015_UI.png';
+import weapon42 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040023_UI.png';
+import weapon43 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040024_UI.png';
+import weapon44 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040034_UI.png';
+import weapon45 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040043_UI.png';
+import weapon46 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040044_UI.png';
+import weapon47 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040053_UI.png';
+import weapon48 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040064_UI.png';
+import weapon49 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040074_UI.png';
+import weapon50 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050011_UI.png';
+import weapon51 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050012_UI.png';
+import weapon52 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050013_UI.png';
+import weapon53 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050015_UI.png';
+import weapon54 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050023_UI.png';
+import weapon55 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050024_UI.png';
+import weapon56 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050034_UI.png';
+import weapon57 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050043_UI.png';
+import weapon58 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050044_UI.png';
+import weapon59 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050053_UI.png';
+import weapon60 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050064_UI.png';
+import weapon61 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050074_UI.png';
+import weapon62 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010016_UI.png';
+import weapon63 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050016_UI.png';
+import weapon64 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21010026_UI.png';
+import weapon65 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21020016_UI.png';
+import weapon66 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21050026_UI.png';
+import weapon67 from '@src/assets/image/IconWeapon160/T_IconWeapon160_21040016_UI.png';
 
 export type T_WoaponData = {
-  名字: string
-  resourceId?: number
-  avatar: string
-  up?: boolean
-  星级: number
-}
+  名字: string;
+  resourceId?: number;
+  avatar: string;
+  up?: boolean;
+  星级: number;
+};
 
 export default [
   { resourceId: 20002001, avatar: weapon1 },
@@ -142,4 +142,4 @@ export default [
   { 名字: '赫奕流明', resourceId: 21020016, avatar: weapon65 },
   { 名字: '琼枝冰绡', resourceId: 21050026, avatar: weapon66 },
   { 名字: '诸方玄枢', resourceId: 21040016, avatar: weapon67 }
-] as T_WoaponData[]
+] as T_WoaponData[];

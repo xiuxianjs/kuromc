@@ -2,12 +2,7 @@
   "name": "alemonjs",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "lemonade-x.alemonjs-gui",
-        "esbenp.prettier-vscode",
-        "christian-kohler.path-intellisense",
-        "bradlc.vscode-tailwindcss"
-      ]
+      "extensions": ["lemonade-x.alemonjs-gui", "esbenp.prettier-vscode", "christian-kohler.path-intellisense", "bradlc.vscode-tailwindcss"]
     }
   },
   "postCreateCommand": "yarn",

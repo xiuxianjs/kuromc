@@ -1,15 +1,15 @@
-import _ from 'lodash'
-import util from '../util'
+import _ from 'lodash';
+import util from '../util';
 
 type T_Config = {
-  base: T_baseConfig
-}
+  base: T_baseConfig;
+};
 type T_baseConfig = {
   gacha: {
     /** 是否统计4星 */
-    isItFourStarCount: boolean
-  }
-}
+    isItFourStarCount: boolean;
+  };
+};
 
 const defaultConfig: T_Config = {
   base: {
@@ -17,25 +17,26 @@ const defaultConfig: T_Config = {
       isItFourStarCount: false
     }
   }
-}
+};
 
 export default new (class Config {
-  #configRootPath = `${util.appFilePath}/config`
-  #configBasePath = `${this.#configRootPath}/base.yaml`
+  #configRootPath = `${util.appFilePath}/config`;
+  #configBasePath = `${this.#configRootPath}/base.yaml`;
   constructor() {
-    util.mkdir(this.#configRootPath)
+    util.mkdir(this.#configRootPath);
     if (!util.fileExists(this.#configBasePath)) {
-      util.writeYAML(this.#configBasePath, defaultConfig.base)
+      util.writeYAML(this.#configBasePath, defaultConfig.base);
     }
     // this.#config.base = util.readYAML(this.#configBasePath);
   }
 
   get baseConfig(): T_baseConfig {
-    return util.readYAML(this.#configBasePath)
+    return util.readYAML(this.#configBasePath);
   }
 
   setBaseConfig(config: T_baseConfig) {
-    const oldConfig = util.readYAML(this.#configBasePath)
-    util.writeYAML(this.#configBasePath, _.merge(oldConfig, config))
+    const oldConfig = util.readYAML(this.#configBasePath);
+
+    util.writeYAML(this.#configBasePath, _.merge(oldConfig, config));
   }
-})()
+})();

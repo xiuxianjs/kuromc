@@ -1,6 +1,5 @@
-import { defineChildren } from 'alemonjs'
-export default defineChildren(() => ({
+export default defineChildren({
   onCreated() {
-    logger.info('明朝插件启动')
+    logger.info('明朝扩展启动');
   }
-}))
+});
