@@ -17,7 +17,7 @@ https://github.com/lemonade-lab/alemongo
 地址
 
 ```sh
-https://github.com/xiuxianjs/kurmoc.git
+https://github.com/xiuxianjs/kuromc.git
 ```
 
 分支
@@ -29,7 +29,7 @@ release
 ### 本地模板
 
 ```sh
-git clone --depth=1 -b release  https://github.com/xiuxianjs/kurmoc.git ./packages/kurmoc
+git clone --depth=1 -b release  https://github.com/xiuxianjs/kuromc.git ./packages/kuromc
 ```
 
 ### Redis

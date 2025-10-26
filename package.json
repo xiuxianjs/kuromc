@@ -60,10 +60,10 @@
     "registry": "https://registry.npmjs.org",
     "access": "public"
   },
-  "bugs": "https://github.com/xiuxianjs/openai/issues",
+  "bugs": "https://github.com/xiuxianjs/kuromc/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiuxianjs/openai.git"
+    "url": "https://github.com/xiuxianjs/kuromc.git"
   },
   "packageManager": "yarn@1.22.22"
 }
