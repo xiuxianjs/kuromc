@@ -2,18 +2,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "gui",
+      "name": "dev",
       "type": "node",
       "request": "launch",
-      "runtimeArgs": ["dev", "--login", "gui"],
-      "runtimeExecutable": "yarn",
-      "skipFiles": ["<node_internals>/**"]
-    },
-    {
-      "name": "qq-bot",
-      "type": "node",
-      "request": "launch",
-      "runtimeArgs": ["dev", "--login", "qq-bot"],
+      "runtimeArgs": ["dev"],
       "runtimeExecutable": "yarn",
       "skipFiles": ["<node_internals>/**"]
     },

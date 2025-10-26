@@ -73,6 +73,8 @@ class Util {
 
       return JSON.parse(data);
     } catch (error) {
+      logger.error('读取JSON文件失败:', error);
+
       return null;
     }
   }
@@ -98,6 +100,8 @@ class Util {
 
       return yaml.parse(data);
     } catch (error) {
+      logger.error('读取YAML文件失败:', error);
+
       return null;
     }
   }
@@ -154,6 +158,8 @@ class Util {
     try {
       return fs.existsSync(filePath);
     } catch (error) {
+      logger.error('文件存在性检查失败:', error);
+
       return false;
     }
   }

@@ -12,7 +12,7 @@ export default OnResponse(
     const Send = useSend(event);
 
     if (typeof img !== 'boolean') {
-      Send(Image(img));
+      void Send(Image(img));
     }
   },
   ['private.message.create', 'message.create']

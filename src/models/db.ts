@@ -1,9 +1,9 @@
-import { getIoRedis } from 'alemonjs';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import { apiWikiCoreCatalogueItemGetPage } from './mc';
 import { Redis } from 'ioredis';
+import { getIoRedis } from '@alemonjs/db';
 
 // 获取当前文件的目录
 const __filename = fileURLToPath(import.meta.url);
@@ -64,7 +64,7 @@ class Data {
    * @param fetchData
    * @returns {Promise<any>}
    */
-  #localData = async (jsonDir, fetchData) => {
+  #localData = (jsonDir, fetchData) => {
     const dir = join(this.#dataDir, jsonDir);
 
     if (existsSync(dir)) {
@@ -100,7 +100,7 @@ class Data {
     const data = fetchData;
 
     if (data?.code === 200) {
-      this.#ioRedis.set(key, JSON.stringify(data), 'EX', 60 * 60 * 24);
+      void this.#ioRedis.set(key, JSON.stringify(data), 'EX', 60 * 60 * 24);
 
       return data;
     }

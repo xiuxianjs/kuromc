@@ -14,7 +14,7 @@ export default OnResponse(
     const Send = useSend(event);
 
     if (!link) {
-      Send(Text('请先绑定抽卡链接，绑定方法请查看抽卡帮助！'));
+      void Send(Text('请先绑定抽卡链接，绑定方法请查看抽卡帮助！'));
 
       return true;
     }
@@ -28,9 +28,9 @@ export default OnResponse(
     });
 
     if (typeof img !== 'boolean') {
-      Send(Image(img));
+      void Send(Image(img));
     } else {
-      Send(Text('图片加载失败...'));
+      void Send(Text('图片加载失败...'));
     }
   },
   ['private.message.create', 'message.create']

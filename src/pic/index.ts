@@ -1,4 +1,4 @@
-import { Render } from 'jsxp';
+import { picture } from 'jsxp';
 import { Browser, ElementHandle, GoToOptions, Page, Viewport } from 'puppeteer';
 
 const sleep = (time: number) => new Promise(resolve => setTimeout(resolve, time));
@@ -35,20 +35,19 @@ export const picURL = async (
     action,
     sleepTime = 1000
   } = options ?? {};
-  const puppeteer = Render()?.Pup;
-  let page: Page | void = void 0;
+  const pic = await picture();
+
+  if (!pic) {
+    logger.error('puppeteer init failed');
+
+    return;
+  }
+  let page: Page = void 0;
 
   try {
-    const isStart = await puppeteer.isStart();
+    const browser: Browser = pic.puppeteer.browser;
 
-    if (!isStart) {
-      await puppeteer.start();
-    }
-    const browser: Browser = await puppeteer.browser;
-
-    page = await browser?.newPage().catch(err => {
-      logger.error(err);
-    });
+    page = await browser?.newPage();
     if (!page) {
       logger.error('page is null');
 
@@ -95,7 +94,7 @@ export const picURL = async (
     }
     new Error('buff is not Buffer');
   } catch (err) {
-    if (page && page.close) {
+    if (page?.close) {
       void page.close();
     }
     logger.error(err);

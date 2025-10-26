@@ -26,11 +26,11 @@ export type TGaChaResData = {
 class McKuroApi {
   private baseUrl = 'https://gmserver-api.aki-game2.com';
   private axios: AxiosInstance;
-  player_id: string | string[] | qs.ParsedQs | qs.ParsedQs[];
+  playerId: string | string[] | qs.ParsedQs | qs.ParsedQs[];
   private lang: string | string[] | qs.ParsedQs | qs.ParsedQs[];
-  private record_id: string | string[] | qs.ParsedQs | qs.ParsedQs[];
-  private resources_id: string | string[] | qs.ParsedQs | qs.ParsedQs[];
-  private svr_id: string | string[] | qs.ParsedQs | qs.ParsedQs[];
+  private recordId: string | string[] | qs.ParsedQs | qs.ParsedQs[];
+  private resourcesId: string | string[] | qs.ParsedQs | qs.ParsedQs[];
+  private svrId: string | string[] | qs.ParsedQs | qs.ParsedQs[];
   private apis = {
     gacha: '/gacha/record/query'
   };
@@ -44,14 +44,14 @@ class McKuroApi {
     // 使用querystring库解析URL中的参数部分
     const params = qs.parse(url.split('?')[1]);
     // 从解析的参数中解构出所需字段
-    const { player_id, lang, record_id, resources_id, svr_id } = params;
+    const { player_id: playerId, lang, record_id: recordId, resources_id: resourcesId, svr_id: svrId } = params;
 
     // 将解析出的参数赋值给类的属性
-    this.player_id = player_id;
+    this.playerId = playerId;
     this.lang = lang;
-    this.record_id = record_id;
-    this.resources_id = resources_id;
-    this.svr_id = svr_id;
+    this.recordId = recordId;
+    this.resourcesId = resourcesId;
+    this.svrId = svrId;
 
     // 初始化Axios实例，设置基础URL为类的baseUrl属性
     this.axios = axios.create({
@@ -67,12 +67,12 @@ class McKuroApi {
   async gacha(cardPoolType: CARD_POOL_TYPE = CARD_POOL_TYPE.角色精准调谐) {
     // 构建抽卡请求的数据对象，包含玩家信息和抽卡池信息。
     const data = {
-      playerId: this.player_id,
-      cardPoolId: this.resources_id,
+      playerId: this.playerId,
+      cardPoolId: this.resourcesId,
       cardPoolType,
-      serverId: this.svr_id,
+      serverId: this.svrId,
       languageCode: this.lang,
-      recordId: this.record_id
+      recordId: this.recordId
     };
 
     try {

@@ -1,17 +1,10 @@
 {
-  "editor.formatOnSave": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // 保存时自动修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll": "always"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "eslint.codeActionsOnSave.mode": "all",
-  "cSpell.words": ["alemongo", "alemonjs", "jsxp", "kurmoc", "lvyjs", "networkidle", "ningmengchongshui", "xiuxian"]
+  // 启用 ESLint 验证
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "cSpell.words": ["alemongo", "alemonjs", "jsxp", "kurmoc", "kuromc", "lvyjs", "networkidle", "ningmengchongshui", "puppeteerrc", "xiuxian"]
 }

@@ -13,7 +13,7 @@ export default OnResponse(
     const Send = useSend(event);
 
     if (!kmcModel.link) {
-      Send(Text('请先绑定抽卡链接，绑定方法请查看抽卡帮助！'));
+      void Send(Text('请先绑定抽卡链接，绑定方法请查看抽卡帮助！'));
 
       return true;
     }

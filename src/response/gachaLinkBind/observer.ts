@@ -11,7 +11,7 @@ export default OnResponse(async (event, next) => {
   const Send = useSend(event);
 
   if (!url) {
-    Send(Text('抽卡链接不正确！'));
+    void Send(Text('抽卡链接不正确！'));
     next();
 
     return;
@@ -26,7 +26,7 @@ export default OnResponse(async (event, next) => {
     links.push({ user_id: UserKey, url });
   }
   util.writeJSON(jsonPath, links);
-  Send(Text('抽卡链接绑定成功！'));
+  void Send(Text('抽卡链接绑定成功！'));
   const kmcModel = new GaChaModel(UserKey);
 
   await updateGachaFunc(Send, kmcModel);

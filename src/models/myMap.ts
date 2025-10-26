@@ -59,7 +59,7 @@ export default class MyMap<T = any> {
     for (const iterator of this.map.values()) {
       const v = (iterator as any)[field];
 
-      if (v && v == value) {
+      if (v && v === value) {
         count++;
       }
     }

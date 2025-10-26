@@ -36,17 +36,17 @@ export default class GaChaModel {
   #jsonUserGachaPath: string;
   #mcApi: McKuroApi = null;
   link: TGachaLink;
-  user_id: string = null;
-  player_id: string = null;
-  constructor(user_id: string) {
+  userId: string = null;
+  playerId: string = null;
+  constructor(userId: string) {
     const links = util.readJSON(this.#jsonLinkPath) || [];
 
-    this.link = _.find(links, ['user_id', user_id]);
-    this.user_id = user_id;
-    this.#jsonUserGachaPath = `${this.#jsonDataRootPath}/${this.user_id}`;
+    this.link = _.find(links, ['user_id', userId]);
+    this.userId = userId;
+    this.#jsonUserGachaPath = `${this.#jsonDataRootPath}/${this.userId}`;
     if (this.link?.url) {
       this.#mcApi = new McKuroApi(this.link.url);
-      this.player_id = this.#mcApi.player_id as string;
+      this.playerId = this.#mcApi.playerId as string;
     }
     util.mkdir(this.#jsonDataRootPath);
     util.mkdir(this.#jsonUserGachaPath);
@@ -103,7 +103,9 @@ export default class GaChaModel {
 
       return Promise.resolve({ updateNum });
     } catch (error) {
-      return Promise.reject();
+      logger.error('更新抽卡数据失败', error);
+
+      return Promise.reject(error);
     }
   }
 

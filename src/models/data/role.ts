@@ -1,4 +1,4 @@
-import profile, { T_Profile } from './profile';
+import profile, { TProfile } from './profile';
 
 // Importing avatar images using import statements
 import avatar1 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_1_UI.png';
@@ -23,12 +23,12 @@ import avatar19 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_24_UI.
 import avatar20 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_26_UI.png';
 import avatar21 from '@src/assets/image/IconRoleHead175/T_IconRoleHead175_27_UI.png';
 
-export type T_RoleData = {
+export type TRoleData = {
   名字: string;
   resourceId?: number;
   性别: string;
   生日: string;
-  属性: T_Profile;
+  属性: TProfile;
   武器: string;
   所属: string;
   星级: number;
@@ -262,4 +262,4 @@ export default [
     up: true,
     avatar: avatar21
   }
-] as T_RoleData[];
+] as TRoleData[];

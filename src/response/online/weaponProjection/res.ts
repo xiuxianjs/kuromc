@@ -15,7 +15,7 @@ export default OnResponse(
     const res = await DB.getWeaponProjection();
 
     if (!res) {
-      Send(Text('数据获取失败'));
+      void Send(Text('数据获取失败'));
 
       return;
     }
@@ -33,9 +33,9 @@ export default OnResponse(
 
     // send
     if (img) {
-      Send(Image(img));
+      void Send(Image(img));
     } else {
-      Send(Text('图片加载失败'));
+      void Send(Text('图片加载失败'));
     }
   },
   ['private.message.create', 'message.create']

@@ -7,7 +7,7 @@ export enum E_Profile_Key {
   '湮灭' = '湮灭'
 }
 
-export type T_Profile = {
+export type TProfile = {
   key: string;
   name: string;
   icon: string;
@@ -52,4 +52,4 @@ export default {
     name: '湮灭',
     icon: darkIcon
   }
-} as Record<E_Profile_Key, T_Profile>;
+} as Record<E_Profile_Key, TProfile>;

@@ -1,5 +1,5 @@
 export default defineChildren({
   onCreated() {
-    logger.info('明朝扩展启动');
+    logger.info('鸣潮扩展启动');
   }
 });

@@ -18,9 +18,9 @@ export default OnResponse(
 
     // send
     if (img) {
-      Send(Image(img));
+      void Send(Image(img));
     } else {
-      Send(Text('图片加载失败'));
+      void Send(Text('图片加载失败'));
     }
   },
   ['private.message.create', 'message.create']
